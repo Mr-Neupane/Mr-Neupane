@@ -80,56 +80,9 @@ $ status
 
 ### 🐍 Contribution Snake
 
-<sub>Not active yet — follow the one-time setup below, then add the image back in.</sub>
-
-<details>
-<summary>🛠️ One-time setup (~3 min)</summary>
-
-1. In this repo, go to **Settings → Actions → General → Workflow permissions** and enable **Read and write permissions**.
-2. Create `.github/workflows/snake.yml` in this repo with:
-
-```yaml
-name: Generate Snake
-
-on:
-  schedule:
-    - cron: "0 0 * * *"   # runs daily at midnight UTC
-  workflow_dispatch: {}
-  push:
-    branches:
-      - main
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-
-      - uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
-
-3. Commit — the Action runs automatically and pushes the animated SVG to an `output` branch.
-4. Once it's run at least once, add this back in above the setup section:
-
-```html
 <p align="center">
   <img src="https://raw.githubusercontent.com/Mr-Neupane/Mr-Neupane/output/github-contribution-grid-snake.svg" alt="Contribution Snake animation" />
 </p>
-```
-
-</details>
 
 ---
 
