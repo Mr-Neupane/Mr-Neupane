@@ -17,6 +17,15 @@
 
 ---
 
+```bash
+$ whoami
+> nischal neupane — backend dev, bug hunter, sleep debtor.
+$ status
+> No bug is too small to escape. 🐛🔍
+```
+
+---
+
 ### 🌐 Connect With Me
 
 <p align="left">
@@ -59,23 +68,6 @@
 
 ---
 
-### 📊 GitHub Stats
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Mr-Neupane&show_icons=true&theme=shadow_blue&hide_border=false&include_all_commits=true&count_private=true" alt="Nischal's GitHub stats"/>
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Neupane&layout=compact&theme=shadow_blue&hide_border=false&include_all_commits=true&count_private=true" alt="Top Languages"/>
-</p>
-
-<p align="center">
-  <img src="https://nirzak-streak-stats.vercel.app/?user=Mr-Neupane&theme=shadow_blue&hide_border=false" alt="GitHub Streak"/>
-</p>
-
-<p align="center">
-  <img src="https://github-contributor-stats.vercel.app/api?username=Mr-Neupane&limit=5&theme=shadow_blue&combine_all_yearly_contributions=true" alt="Top Contributed Repo"/>
-</p>
-
----
-
 ### 📌 Pinned Projects
 
 | Project | Description | Language |
@@ -86,10 +78,70 @@
 
 ---
 
+### 🐍 Contribution Snake
+
+<sub>Not active yet — follow the one-time setup below, then add the image back in.</sub>
+
+<details>
+<summary>🛠️ One-time setup (~3 min)</summary>
+
+1. In this repo, go to **Settings → Actions → General → Workflow permissions** and enable **Read and write permissions**.
+2. Create `.github/workflows/snake.yml` in this repo with:
+
+```yaml
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # runs daily at midnight UTC
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+3. Commit — the Action runs automatically and pushes the animated SVG to an `output` branch.
+4. Once it's run at least once, add this back in above the setup section:
+
+```html
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Mr-Neupane/Mr-Neupane/output/github-contribution-grid-snake.svg" alt="Contribution Snake animation" />
+</p>
+```
+
+</details>
+
+---
+
 <p align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random Dev Quote"/>
 </p>
 
 <p align="center">
-  <img src="https://visitcount.itsvg.in/api?id=Mr-Neupane&icon=0&color=0" alt="Visitor Count"/>
+  <img src="https://komarev.com/ghpvc/?username=Mr-Neupane&color=blue&style=flat" alt="Visitor Count"/>
+</p>
+
+<p align="center">
+  <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZjgyOHN3bHIwNWZtdzV1NDQ2Zmo3c3cxbTIyc29uZWI2Z3BzYXBncCZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/13HBDT4QSTpveU/giphy.gif" width="200" alt="Surprised Cat"/>
+  <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZjgyOHN3bHIwNWZtdzV1NDQ2Zmo3c3cxbTIyc29uZWI2Z3BzYXBncCZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/vqJAJMr4klojK/giphy.gif" width="200" alt="Funny GIF"/>
 </p>
