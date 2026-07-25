@@ -10,7 +10,7 @@
 ### 💫 About Me
 
 - 🔭 Currently working on **Pratham IT System**
-- 🌱 Currently learning **.NET Core**
+- 🌱 Currently learning **Vue Js**
 - 💬 Ask me about **SQL queries**
 - 📍 Based in Birtamod, Jhapa, Nepal
 - ⚡ More code, less sleep
