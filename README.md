@@ -1,4 +1,4 @@
-<h1 align="center">Hi there 👋, I'm Nischal Neupane</h1>
+<h1 align="center">Hi there 👋, I'm Nischal oldpane </h1>
 <h3 align="center">No bug is too small to escape.</h3>
 
 <p align="center">
